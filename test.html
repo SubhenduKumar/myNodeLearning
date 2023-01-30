@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="hi" type="file">
+</body>
+<footer>
+
+    <script>
+
+        // const textFileContent = new Blob(["Hello, World!"], { type: "text/plain" });
+
+        // // create a URL that can be used to reference the text file
+        // const textFileUrl = URL.createObjectURL(textFileContent);
+
+        // console.log("textFileUrl", textFileUrl);
+        // fetch(textFileUrl)
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         console.log(data);
+        //     })
+        // document.getElementById("hi").addEventListener("change", async (e) => {
+        function getBase64(file) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                return reader.result
+            };
+            reader.onerror = function (error) {
+                console.log('Error: ', error);
+            };
+        }
+        var file = document.getElementById('hi').addEventListener("change", (e) => {
+            const x = e.target.files[0]
+            console.log(getBase64(x))
+        })
+        // getBase64(file);
+        // })
+        //     gotPhoto(file)
+        //     // let xhr = new XMLHttpRequest();
+
+        //     // xhr.open('POST', 'http://localhost:3000/upload', true);
+        //     // xhr.setRequestHeader('Content-type', file.type);
+        //     // xhr.send(file);
+        //     // const data={hi:"hi"}
+        //     // const resp = await fetch("http://localhost:5000/" + data)
+        //     // console.log(resp);
+        //     // let formData = new FormData();
+        //     // formData.append('file', e.target.files[0]);
+
+        //     // fetch('http://localhost:3000/upload', {
+        //     //     method: 'POST',
+        //     //     body: formData
+        //     // })
+        //     //     .then(response => response.json())
+        //     //     .then(data => {
+        //     //         console.log('Success:', data);
+        //     //     })
+        //     //     .catch((error) => {
+        //     //         console.error('Error:', error);
+        //     //     });
+        // })
+    </script>
+
+</footer>
+
+</html>

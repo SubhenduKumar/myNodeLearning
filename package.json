@@ -1,0 +1,22 @@
+{
+  "name": "basicnode",
+  "version": "1.0.0",
+  "description": "My First",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zinga",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1",
+    "express-validator": "^6.14.3",
+    "ip": "^1.1.8",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "twig": "^1.15.4"
+  }
+}
